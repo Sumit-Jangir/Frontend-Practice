@@ -1,7 +1,6 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: 0;
 }
 
 .main{
@@ -55,9 +54,11 @@ h4{
     width: 71%;
 }
 
-
+i{
+    font-size: 15px;
+}
 .child2-1-a{
-    width: 8%;
+    width: 9.5%;
     margin-left: 10%;
     padding: 2px;
     background-color: #0e5020;
