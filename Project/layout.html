@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: aqua;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .box-1 {
+            /* border: 6px solid black; */
+            height: 45%;
+            width: 100%;
+            display: flex;
+        }
+
+        .item-1 {
+            height: 100%;
+            width: 60%;
+            background-color: fuchsia;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+        }
+
+        span {
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            rotate: 45deg;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px #7e728f;
+        }
+
+        .box-11 {
+            height: 100%;
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .item-2 {
+            height: 50%;
+            width: 100%;
+            background-color: cyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+        }
+
+        .item-3 {
+            height: 50%;
+            width: 100%;
+            background-color: cyan;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 5px solid black;
+        }
+
+        p {
+            rotate: -45deg;
+        }
+
+        .box-2 {
+            border: 6px solid black;
+            height: 28%;
+            width: 100%;
+            background-color: orchid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box-3 {
+            height: 27%;
+            width: 100%;
+            display: flex;
+            
+        }
+        
+        .box{
+            background-color: #adffb7;
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 6px solid black;
+            
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-1">
+            <div class="item-1"><span>
+                    <p>1</p>
+                </span></div>
+            <div class="box-11">
+                <div class="item-2"><span>
+                        <p>2</p>
+                    </span></div>
+                <div class="item-3"><span>
+                        <p>3</p>
+                    </span></div>
+
+            </div>
+        </div>
+        <div class="box-2">
+            <span>
+                <p>4</p>
+            </span>
+        </div>
+        <div class="box-3">
+            <div class="box"><span>
+                    <p>5</p>
+                </span></div>
+            <div class="box"><span>
+                    <p>6</p>
+                </span></div>
+            <div class="box"><span>
+                    <p>7</p>
+                </span></div>
+            <div class="box"><span>
+                    <p>8</p>
+                </span></div>
+            <div class="box"><span>
+                    <p>9</p>
+                </span></div>
+        </div>
+
+    </div>
+</body>
+
+</html>
