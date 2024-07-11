@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Numbers</title>
+</head>
+<body>
+
+    <h1>Palindrome Numbers</h1>
+    <script>
+        let a = prompt('Enter a Number:');
+        // a = parseInt(a); // Ensure 'a' is treated as a number
+
+        for (let c = 1; c <= a; c++) {
+            let original = c;
+            let reversed = 0;
+            let temp = c;
+
+            while (temp > 0) {
+                let rem = temp % 10;
+                reversed = reversed * 10 + rem;
+                temp = Math.floor(temp / 10);
+            }
+
+            if (original == reversed) {
+                console.log(original);
+            }
+        }
+    </script>
+</body>
+</html>
