@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            align-items:center ;
+            margin: 30px;
+        }
+        .box{
+            border: 1px solid;
+            border-radius: 10px;
+            /* height: 50px;
+            width: 50px; */
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+            padding: 10px 20px;
+            cursor: pointer;
+            
+        }
+
+        .box:nth-child(1){
+            background-color: red;
+        }
+        .box:nth-child(2){
+            background-color: yellow;
+        }
+        .box:nth-child(3){
+            background-color: blue;
+        }
+        .box:nth-child(4){
+            background-color: green;
+        }
+    </style>
+</head>
+<body id="body">
+    <div class="main">
+    <div class="box">Red</div>
+    <div class="box">Yellow</div>
+    <div class="box">Blue</div>
+    <div class="box">Green</div>
+</div>
+
+<script>
+    document.getElementsByClassName("box")[0].onclick = () => {
+            document.getElementById("body").style.backgroundColor = ("red");
+        };
+    document.getElementsByClassName("box")[1].onclick = () => {
+            document.getElementById("body").style.backgroundColor = ("yellow");
+        };
+    document.getElementsByClassName("box")[2].onclick = () => {
+            document.getElementById("body").style.backgroundColor = ("blue");
+        };
+    document.getElementsByClassName("box")[3].onclick = () => {
+            document.getElementById("body").style.backgroundColor = ("green");
+        };
+    
+</script>
+</body>
+</html>
