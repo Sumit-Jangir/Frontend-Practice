@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            margin-top: 5rem;
+            width: 40%;
+            border-radius: 10px;
+            padding: 30px;
+            background-color: #edeaea;
+            box-shadow: 0px 0px 17px gray;
+
+        }
+        /* h1{
+            padding-bottom: 15px;
+        } */
+         #select{
+            padding: 8px;
+            width: 200px;
+            margin: 20px 0px;
+            border: 2px solid black;
+            border-radius: 7px;
+         }
+         .colour{
+            display: flex;
+            gap: 7px;
+            margin-bottom: 20px;
+         }
+         .box{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+         }
+         .box:nth-child(1){
+            background-color: #611623;
+         }
+         .box:nth-child(2){
+            background-color: #004744;
+         }
+         .box:nth-child(3){
+            background-color: #33255B;
+         }
+         .box:nth-child(4){
+            background-color: #113B29;
+         }
+         .box:nth-child(5){
+            background-color: #AB4ABA;
+         }
+
+         .btn{
+            font-size: 1.2rem;
+            padding: 10px;
+            margin: 5px;
+            width: 80px;
+            background-color: #1E685F;
+            border: 2px solid;
+            border-radius: 10px;
+         }
+         #react,#angular,#django,#aws{
+            padding: 20px;
+            text-align: justify;
+            display: none;
+         }
+         </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Select your Domain:</h1>
+            <select name="" id="select">
+                <option value="">--Make a choice--</option>
+                <option value="react">React</option>
+                <option value="angular">Angular</option>
+                <option value="django">Django</option>
+                <option value="aws">AWS</option>
+            </select>
+            <div class="colour">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        
+        <div id="react">
+            React is a popular open-source JavaScript library developed by Facebook for building user interfaces, especially single-page applications where data changes frequently. Released in 2013, React uses a component-based architecture, allowing developers to create reusable and modular UI components. It utilizes JSX for a syntax that resembles HTML within JavaScript, and employs a virtual DOM to enhance performance by minimizing direct manipulation of the actual DOM. React's unidirectional data flow simplifies debugging and application behavior prediction. With features like Hooks and a vast ecosystem, React is widely used for dynamic, high-performance web applications and even mobile apps via React Native.
+        </div>
+        <div id="angular">
+            Angular is a powerful, open-source web application framework developed and maintained by Google. It is designed for building dynamic single-page applications (SPAs) and relies on TypeScript, a superset of JavaScript. Released in 2016 as a complete rewrite of AngularJS, Angular features a component-based architecture that enhances code reusability and maintainability. Its declarative templates, dependency injection, and powerful CLI streamline the development process. Angular employs two-way data binding, enabling seamless synchronization between the model and the view. With robust tools for routing, forms, HTTP client, and comprehensive testing, Angular is ideal for developing large-scale, feature-rich web applications.
+        </div>
+        <div id="django">
+            Django is a high-level, open-source web framework written in Python, designed to facilitate the rapid development of secure and maintainable web applications. Created by Adrian Holovaty and Simon Willison, it was first released in 2005. Django follows the Model-View-Template (MVT) architectural pattern, promoting the reusability of components and adhering to the DRY (Don't Repeat Yourself) principle. It includes a powerful ORM (Object-Relational Mapping) system, an intuitive admin interface, and built-in tools for handling authentication, URL routing, and form processing. Django's emphasis on security helps developers avoid common pitfalls like SQL injection and cross-site scripting, making it suitable for scalable, robust applications.
+        </div>
+        <div id="aws">
+            AWS (Amazon Web Services) is a comprehensive and widely adopted cloud platform provided by Amazon, offering over 200 fully-featured services from data centers globally. Launched in 2006, AWS provides a scalable and reliable infrastructure for hosting applications, storing data, and managing IT resources. Key services include computing power (EC2), storage (S3), databases (RDS, DynamoDB), and machine learning (SageMaker). AWS supports a pay-as-you-go pricing model, allowing businesses of all sizes to access enterprise-level technology without significant upfront costs. With its robust security measures, extensive compliance certifications, and a vast ecosystem of tools and partners, AWS is a leading choice for cloud computing solutions.
+        </div>
+        
+        <button class="btn">Upper</button>
+            <button class="btn">Lower</button>
+            <button class="btn">+</button>
+            <button class="btn">-</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementsByClassName("box")[0].onclick = () => {
+            document.body.style.backgroundColor = "#611623";
+        };
+        document.getElementsByClassName("box")[1].onclick = () => {
+            document.body.style.backgroundColor = "#004744";
+        };
+        document.getElementsByClassName("box")[2].onclick = () => {
+            document.body.style.backgroundColor = "#33255B";
+        };
+        document.getElementsByClassName("box")[3].onclick = () => {
+            document.body.style.backgroundColor = "#113B29";
+        };
+        document.getElementsByClassName("box")[4].onclick = () => {
+            document.body.style.backgroundColor = "#AB4ABA";
+        };
+        
+        document.getElementById("select").onchange = function () {
+            var value = this.value;
+            var sections = ["react", "angular", "django", "aws"];
+            
+            sections.forEach(function (section) {
+                document.getElementById(section).style.display = "none";
+            });
+
+            if (value) {
+                document.getElementById(value).style.display = "block";
+            }
+        };
+
+        let count = 16;
+        const sections = ["react", "angular", "django", "aws"];
+       
+
+        document.getElementsByClassName("btn")[0].onclick = () => {
+            sections.forEach(section => {
+                document.getElementById(section).style.textTransform = "uppercase";
+            });
+        };
+
+        document.getElementsByClassName("btn")[1].onclick = () => {
+            sections.forEach(section => {
+                document.getElementById(section).style.textTransform = "lowercase";
+            });
+        };
+
+        document.getElementsByClassName("btn")[2].onclick = () => {
+            count++;
+            sections.forEach(section => {
+                document.getElementById(section).style.fontSize = count + "px";
+            });
+        };
+        document.getElementsByClassName("btn")[3].onclick = ()=>{
+            count--;
+            sections.forEach(section => {
+                document.getElementById(section).style.fontSize = count + "px";
+            });
+        }
+        
+
+        </script>
+</body>
+
+</html>
