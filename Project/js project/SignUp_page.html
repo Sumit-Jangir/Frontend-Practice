@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <button id="btn">click</button>
+
+    <script>
+        document.getElementById("btn").onclick = ()=>{
+           let a = Number(document.getElementById("inp1").value);
+           let b = Number(document.getElementById("inp2").value);
+            let c =  a + b;
+            console.log(c)
+        }
+    </script> -->
+        <h1>SignUp Form</h1>
+    Name : <input type="text" class="inp1" placeholder="Enter your name"><br><br>
+    Email : <input type="email" class="inp1" placeholder="Enter your email"><br><br>
+    Mobile : <input type="number" class="inp1" placeholder="Enter your Mobile Number"><br><br>
+    Password : <input type="password" class="inp1" placeholder="Enter your password"><br><br>
+
+    <button class="btn">Submit</button>
+
+    <script>
+        document.getElementsByClassName("btn")[0].onclick = function(){
+           
+            let val = document.getElementsByClassName("inp1");
+            for(let i=0;i<val.length;i++){
+                console.log(val[i].value);
+            }
+
+        }
+
+    </script>
+</body>
+</html>
