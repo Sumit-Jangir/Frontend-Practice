@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: gray;
+        }
+
+        .main {
+            margin: 200px auto;
+            /* height: 400px; */
+            width: 350px;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(50, 41, 41);
+
+        }
+
+        #input {
+            width: 99%;
+            padding: 10px;
+            background-color: rgb(196, 188, 188);
+            border: 2px solid;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        /* #box{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        } */
+        .btn,.clr {
+            width: 24%;
+            padding: 10px;
+            margin: 5px 0px;
+            border: 2px solid ;
+            border-radius: 8px;
+            background-color: rgb(196, 188, 188);
+            cursor: pointer;
+            font-size: 25px;
+
+        }
+
+        .clr {
+            width: 49%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <input id="input" type="text" readonly>
+        <div id="box">
+
+            <button class="clr" onclick="clr()">Clear</button>
+            <button class="clr" onclick="del()">Delete</button>
+            <button class="btn">9</button>
+            <button class="btn">8</button>
+            <button class="btn">7</button>
+            <button class="btn">/</button>
+            <button class="btn">6</button>
+            <button class="btn">5</button>
+            <button class="btn">4</button>
+            <button class="btn">*</button>
+            <button class="btn">3</button>
+            <button class="btn">2</button>
+            <button class="btn">1</button>
+            <button class="btn">-</button>
+            <button class="btn">.</button>
+            <button class="btn">0</button>
+            <button class="btn">=</button>
+            <button class="btn">+</button>
+
+            
+        </div>
+    </div>
+
+    <script>
+
+        let a = document.querySelectorAll(".btn");
+        let inp = document.querySelector("#input");
+        console.log(inp);
+           
+        for(let i of a){
+            
+            i.onclick = ()=>{
+                if(i.innerText == "="){
+                    inp.value = eval(inp.value);
+                    console.log(inp.value)
+                }
+                else{
+                    inp.value += i.innerText;
+
+                }
+            }
+            
+        }
+
+    function clr(){
+        inp.value = "";
+    }
+
+    function del(){
+        inp.value = inp.value.slice(0,-1);
+    }
+
+    </script>
+</body>
+
+</html>
