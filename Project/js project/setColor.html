@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #7dede0;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is a heading tag</h1>
+    <input type="range" min="5" max="100" id="range">
+    <input type="color" id="color">
+
+    <script>
+        document.querySelector("#color").onchange = ()=>{;
+        let a = document.querySelector("#color").value;
+        console.log(a);
+        document.querySelector("body").style.backgroundColor = a;
+        }
+
+        document.querySelector("#range").onchange = ()=>{
+            let b = document.querySelector("#range").value;
+            console.log(b);
+            document.querySelector("h1").style.fontSize = b + "px"
+        }
+    </script>
+</body>
+</html>
