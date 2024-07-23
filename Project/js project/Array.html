@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <input type="text" placeholder="Enter Your Friends Name" id="input">
+        <button id="array">Add To Array</button>
+        <button id="print">Print Names</button>
+
+        <h3 id="text"></h3>
+    </div>
+
+    <script>
+        let arr = [];
+
+        document.querySelector("#array").onclick = () => {
+            let val = document.querySelector("#input").value;
+            document.querySelector("#input").value = '';
+            document.querySelector("#input").focus();
+            arr.push(val);
+            console.log(arr);
+
+        }
+        document.querySelector("#print").onclick = () => {
+            var Loop = function (i) {
+                if (arr[i]) {
+                    console.log(arr[i]);
+                    if(i==arr.length-1){
+                        document.querySelector("#text").innerText += arr[i];
+                    }
+                    else{
+
+                        document.querySelector("#text").innerText += arr[i] + ",";
+                    }
+                    setTimeout(function () { Loop(i + 1); }, 1000);
+                }
+            }
+            Loop(0);
+
+        }
+
+    </script>
+</body>
+</html>
