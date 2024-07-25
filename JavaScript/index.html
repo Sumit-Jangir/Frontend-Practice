@@ -9,24 +9,146 @@
 
     <h1>Palindrome Numbers</h1>
     <script>
-        let a = prompt('Enter a Number:');
-        // a = parseInt(a); // Ensure 'a' is treated as a number
+        // let a = prompt('Enter a Number:');
+        // // a = parseInt(a); // Ensure 'a' is treated as a number
 
-        for (let c = 1; c <= a; c++) {
-            let original = c;
-            let reversed = 0;
-            let temp = c;
+        // for (let c = 1; c <= a; c++) {
+        //     let original = c;
+        //     let reversed = 0;
+        //     let temp = c;
 
-            while (temp > 0) {
-                let rem = temp % 10;
-                reversed = reversed * 10 + rem;
-                temp = Math.floor(temp / 10);
+        //     while (temp > 0) {
+        //         let rem = temp % 10;
+        //         reversed = reversed * 10 + rem;
+        //         temp = Math.floor(temp / 10);
+        //     }
+
+        //     if (original == reversed) {
+        //         console.log("5");
+        //     }
+        // }
+
+
+        let arr_obj = [
+            {
+            id: 101,
+            fname: "sumit",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:18,
+            mobile: 9800365401,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
             }
-
-            if (original == reversed) {
-                console.log(original);
+        },
+            {
+            id: 102,
+            fname: "amit",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:14,
+            mobile: 98003654033,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
+            }
+        },
+            {
+            id: 103,
+            fname: "rohit",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:19,
+            mobile: 9800365321,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
+            }
+        },
+            {
+            id: 104,
+            fname: "mohit",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:12,
+            mobile: 4324365401,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
+            }
+        },
+            {
+            id: 105,
+            fname: "sahil",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:30,
+            mobile: 9800365401,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
+            }
+        },
+            {
+            id: 106,
+            fname: "akash",
+            lname: "jangir", age:38,
+            city: "jaipur",
+            age:18,
+            mobile: 9800365401,
+            skills: ["c", "c++", "python", "mern", "django"],
+            fullname: function () {
+                console.log(this.fname, this.lname,this.skills[3])
+            },
+            marks: {
+            physics: 85,
+            chemistery:55,
+            maths: 80
             }
         }
+    ]
+
+        
+
+    const adults = arr_obj.filter(person => person.marks.physics);
+            // console.log(obj.fullname())
+            console.log(adults)
+        // for(let i of adults){
+        //     console.log(i.id,i.fname,i.lname,i.mobile)
+        //     // i.filter(age>=18){
+        //     //     console.log(i);
+        //     // }
+        //     // console.log(i.id);
+        //     // console.log(adults.id)
+        // }
+        // Log the filtered array
+
     </script>
 </body>
 </html>
