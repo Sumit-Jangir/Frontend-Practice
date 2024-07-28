@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindrome Numbers</title>
 </head>
+
 <body>
 
     <h1>Palindrome Numbers</h1>
@@ -31,114 +33,185 @@
 
         let arr_obj = [
             {
-            id: 101,
-            fname: "sumit",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:18,
-            mobile: 9800365401,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
+                id: 101,
+                fname: "sumit",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 18,
+                mobile: 9800365401,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                },
+                orders: [
+                    { orderId: "C789", amount: 100.5, status: "completed" },
+                    { orderId: "D012", amount: 75.2, status: "completed" },
+                ]
             },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
-            }
-        },
             {
-            id: 102,
-            fname: "amit",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:14,
-            mobile: 98003654033,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
+                id: 102,
+                fname: "amit",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 14,
+                mobile: 98003654033,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                }, orders: [
+                    { orderId: "C78", amount: 10.5, status: "completed" },
+                    { orderId: "D01", amount: 75.2, status: "completed" },
+                ]
             },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
-            }
-        },
             {
-            id: 103,
-            fname: "rohit",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:19,
-            mobile: 9800365321,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
+                id: 103,
+                fname: "rohit",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 19,
+                mobile: 9800365321,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                },
+                orders: [
+                    { orderId: "C785", amount: 102.5, status: "completed" },
+                    { orderId: "D016", amount: 45.2, status: "panding" },
+                ]
             },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
-            }
-        },
             {
-            id: 104,
-            fname: "mohit",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:12,
-            mobile: 4324365401,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
+                id: 104,
+                fname: "mohit",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 12,
+                mobile: 4324365401,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                }, orders: [
+                    { orderId: "C489", amount: 150.5, status: "panding" },
+                    { orderId: "D412", amount: 65.2, status: "completed" },
+                ]
             },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
-            }
-        },
             {
-            id: 105,
-            fname: "sahil",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:30,
-            mobile: 9800365401,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
+                id: 105,
+                fname: "sahil",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 30,
+                mobile: 9800365401,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                },
+                orders: [
+                    { orderId: "E789", amount: 100.5, status: "completed" },
+                    { orderId: "S012", amount: 85.2, status: "panding" },
+                ]
             },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
-            }
-        },
             {
-            id: 106,
-            fname: "akash",
-            lname: "jangir", age:38,
-            city: "jaipur",
-            age:18,
-            mobile: 9800365401,
-            skills: ["c", "c++", "python", "mern", "django"],
-            fullname: function () {
-                console.log(this.fname, this.lname,this.skills[3])
-            },
-            marks: {
-            physics: 85,
-            chemistery:55,
-            maths: 80
+                id: 106,
+                fname: "akash",
+                lname: "jangir",
+                age: 38,
+                city: "jaipur",
+                age: 18,
+                mobile: 9800365401,
+                skills: ["c", "c++", "python", "mern", "django"],
+                fullname: function () {
+                    console.log(this.fname, this.lname, this.skills[3])
+                },
+                marks: {
+                    physics: 85,
+                    chemistery: 55,
+                    maths: 80
+                },
+                orders: [
+                    { orderId: "C709", amount: 10.5, status: "panding" },
+                    { orderId: "D512", amount: 7.2, status: "completed" },
+                ]
             }
-        }
-    ]
+        ]
 
+
+        // Filter users who are aged 18 or younger. 
+
+        // const adults = arr_obj.filter(item => item.age >= 18);
+        // console.log(adults);
+
+
+        // Map the array to get an array of user names.
+
+        // const firstName = arr_obj.map(name)
+        // console.log(firstName);
+        // function name(i) {
+        //     return i.fname;
+        // }
+
+
+        // Filter orders with an amount greater than 50.
+
+        // const ord = arr_obj.map(item => {
+        //     var a = item.orders.filter(i => i.amount > 100);
+        //     return a;
+        // });
+        
+        // const ord = arr_obj.map(item => {
+        //     return item.orders.filter(i => i.amount > 50);
+        // });
+
+
+        // console.log(ord);
         
 
-    const adults = arr_obj.filter(person => person.marks.physics);
-            // console.log(obj.fullname())
-            console.log(adults)
+        // Map the array to get an array of order IDs.
+
+        // const ord2 = arr_obj.flatMap(item =>
+        //     item.orders.map(i => i.orderId)
+        // )
+        // console.log(ord2);
+
+
+
+
+
+
+
+
+        // const adults = arr_obj.filter(person => person.marks.physics);
+        // console.log(obj.fullname())
+        // console.log(adults)
         // for(let i of adults){
         //     console.log(i.id,i.fname,i.lname,i.mobile)
         //     // i.filter(age>=18){
@@ -151,4 +224,5 @@
 
     </script>
 </body>
+
 </html>
