@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #534f4f;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            /* text-align: center; */
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .css-properties {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .css-properties input {
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 32%;
+        }
+
+        #outputBox {
+            width: 100%;
+            height: 200px;
+            border: 2px solid #000;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow-y: auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <textarea id="inputText" placeholder="Type here..."></textarea>
+        <h2>CSS Properties</h2>
+        <div class="css-properties">
+            <input type="text" id="color" placeholder="color">
+            <input type="text" id="bgColor" placeholder="background color">
+            <input type="text" id="fontSize" placeholder="Font size">
+        </div>
+        <div id="outputBox"></div>
+        <p>Total letters: <span id="letterCount">0</span></p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const inputText = document.getElementById('inputText');
+    const colorInput = document.getElementById('color');
+    const bgColorInput = document.getElementById('bgColor');
+    const fontSizeInput = document.getElementById('fontSize');
+    const outputBox = document.getElementById('outputBox');
+    const letterCount = document.getElementById('letterCount');
+
+    inputText.addEventListener('input', () => {
+        outputBox.textContent = inputText.value;
+        letterCount.textContent = inputText.value.length;
+    });
+
+    colorInput.addEventListener('input', () => {
+        outputBox.style.color = colorInput.value;
+    });
+
+    bgColorInput.addEventListener('input', () => {
+        outputBox.style.backgroundColor = bgColorInput.value;
+    });
+
+    fontSizeInput.addEventListener('input', () => {
+        outputBox.style.fontSize = fontSizeInput.value;
+    });
+});
+
+    </script>
+</body>
+
+</html>
