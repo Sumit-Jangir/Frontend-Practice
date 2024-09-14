@@ -1,0 +1,33 @@
+#root {
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main{
+  width: 70%;
+  margin: 100px auto;
+  /* border: 2px solid;
+  padding: 10px; */
+}
+.box{
+  margin: auto;
+  border: 2px solid;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.box h2{
+  margin: 10px;
+}
+.box input{
+  margin: 10px;
+}
+.btn{
+  text-align: center;
+}
+.box button{
+
+  margin: 10px;
+  width: 150px;
+}
