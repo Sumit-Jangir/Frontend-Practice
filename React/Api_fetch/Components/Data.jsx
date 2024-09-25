@@ -15,6 +15,8 @@ function Data() {
   console.log(fetch);
 
   return (
+    <div className="main">
+
       <div className="row">
         {fetch.map((item,i) => (
           <div className="card" key={i} style={{ width: "20rem" }}>
@@ -30,11 +32,12 @@ function Data() {
               </p>
               {/* <a href="#" className="btn btn-primary">
                 Go somewhere
-              </a> */}
+                </a> */}
             </div>
           </div>
         ))}
       </div>
+        </div>
   );
 }
 
