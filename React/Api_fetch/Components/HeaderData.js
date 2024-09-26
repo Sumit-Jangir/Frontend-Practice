@@ -8,8 +8,8 @@ const HeaderData = [
         href:"/about"
     },
     {
-        title:"Blog",
-        href:"/blog"
+        title:"SignUp",
+        href:"/signup"
     },
     {
         title:"Items",
