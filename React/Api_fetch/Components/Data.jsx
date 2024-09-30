@@ -8,6 +8,7 @@ function Data() {
   const [loading, setLoading] = useState(true);
   const [Search, setSearch] = useState("");
   const [Sort, setSort] = useState("");
+  const [RatingVal, setRatingVal] = useState(0);
 
   async function fetchData() {
     const res = await axios.get("https://fakestoreapi.com/products");
@@ -22,13 +23,11 @@ function Data() {
 
   const Filter = fetch.filter((item) => {
     return (
-      item.title?.toLowerCase().includes(Search?.toLowerCase() || '') ||
-      item.description?.toLowerCase().includes(Search?.toLowerCase() || '') ||
-      item.category?.toLowerCase().includes(Search?.toLowerCase() || '')
+      item.title?.toLowerCase().includes(Search?.toLowerCase() || "") ||
+      item.description?.toLowerCase().includes(Search?.toLowerCase() || "") ||
+      item.category?.toLowerCase().includes(Search?.toLowerCase() || "")
     );
   });
-
-  
 
   const Sorttest = () => {
     if (Sort == "a") {
@@ -40,11 +39,25 @@ function Data() {
     return Filter;
   };
 
+  const Rating = ()=>{
+    if(RatingVal == 1){
+      return 
+    }
+  }
+
   return (
     <div className="main">
       <input type="search" onInput={(e) => setSearch(e.target.value)} />
       <button onClick={() => setSort("a")}>Low to high</button>
       <button onClick={() => setSort("b")}>High to low</button>
+      <label for="Rating">Rating:</label>
+      <select name="Rating" id="Rating">
+        <option value="1">1.0 and above</option>
+        <option value="2">2.0 and above</option>
+        <option value="3">3.0 and above</option>
+        <option value="4">4.0 and above</option>
+        <option value="5">5.0 and above</option>
+      </select>
       <div className="row">
         {loading ? (
           <h1>Loading...</h1>
@@ -67,9 +80,7 @@ function Data() {
                 <h5 className="card-title">{item.title}</h5>
                 <h3>$ {item.price}</h3>
                 <h6>Rating: {item.rating.rate}</h6>
-                <p className="card-text">
-                  {item.description}
-                </p>
+                <p className="card-text">{item.description}</p>
                 {/* <a href="#" className="btn btn-primary">
                 Go somewhere
                 </a> */}
