@@ -8,7 +8,7 @@ function Data() {
   const [loading, setLoading] = useState(true);
   const [Search, setSearch] = useState("");
   const [Sort, setSort] = useState("");
-  const [RatingVal, setRatingVal] = useState("0");
+  const [RatingVal, setRatingVal] = useState(0);
 
   async function fetchData() {
     const res = await axios.get("https://fakestoreapi.com/products");
@@ -30,13 +30,19 @@ function Data() {
   });
 
   const Sorttest = () => {
-    if (Sort == "a") {
-      return [...Filter].sort((a, b) => a.price - b.price);
+
+    const ratingValue = RatingVal;
+    const filteredByRating = Filter.filter((item) => item.rating.rate >= ratingValue);
+  
+    // Now apply sorting based on the Sort state
+    if (Sort === "a") {
+      return [...filteredByRating].sort((a, b) => a.price - b.price);
     }
-    if (Sort == "b") {
-      return [...Filter].sort((a, b) => b.price - a.price);
+    if (Sort === "b") {
+      return [...filteredByRating].sort((a, b) => b.price - a.price);
     }
-    return Filter;
+    
+    return filteredByRating;
   };
 
   
@@ -48,11 +54,11 @@ function Data() {
       <button onClick={() => setSort("b")}>High to low</button>
       <label htmlFor="Rating">Rating:</label>
       <select name="Rating" id="Rating" onChange={(e) => setRatingVal(e.target.value)}>
-        <option value="1" >1.0 and above</option>
-        <option value="2">2.0 and above</option>
-        <option value="3">3.0 and above</option>
-        <option value="4">4.0 and above</option>
-        <option value="5">5.0 and above</option>
+        <option value="1" >1 and above</option>
+        <option value="2">2 and above</option>
+        <option value="3">3 and above</option>
+        <option value="4">4 and above</option>
+        <option value="5">5</option>
       </select>
       <div className="row">
         {loading ? (
