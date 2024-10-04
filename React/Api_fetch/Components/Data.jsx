@@ -10,7 +10,9 @@ function Data() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("");
   const [ratingVal, setRatingVal] = useState(0);
-  const [selectedProduct, setSelectedProduct] = useState(null); // For modal
+  const [selectedProduct, setSelectedProduct] = useState(false);
+  const [view, setView] = useState([]);
+
 
   async function fetchData() {
     const res = await axios.get("https://fakestoreapi.com/products");
@@ -46,13 +48,18 @@ function Data() {
     return filteredByRating;
   };
 
-  const openModal = (product) => {
-    setSelectedProduct(product); // Open the modal with the selected product
-  };
 
   const closeModal = () => {
-    setSelectedProduct(null); // Close the modal
+    setSelectedProduct(false); 
+    
   };
+
+  async function viewData(id) {
+    const res = await axios.get(`https://fakestoreapi.com/products/${id}`);
+    setView(res.data);
+    setSelectedProduct(true);
+    console.log(view);
+  }
 
   return (
     <div className="main">
@@ -96,7 +103,7 @@ function Data() {
                 <p className="card-text">{item.description}</p>
                 <div className="btn">
                   <button className="btn-link">Add To Cart</button>
-                  <button className="btn-link" onClick={() => openModal(item)}>
+                  <button className="btn-link" onClick={() => viewData(item.id)}>
                     View Details
                   </button>
                 </div>
@@ -107,23 +114,23 @@ function Data() {
       </div>
 
       {/* Modal */}
-      {selectedProduct && (
+      {selectedProduct && view && (
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={closeModal}>
               &times;
             </span>
-            <h2>{selectedProduct.title}</h2>
+            <h2>{view.title}</h2>
             <img
-              src={selectedProduct.image}
-              alt={selectedProduct.title}
+              src={view.image}
+              alt={view.title}
               height={300}
               width={300}
             />
-            <h3>$ {selectedProduct.price}</h3>
-            <p>{selectedProduct.description}</p>
-            <p>Category: {selectedProduct.category}</p>
-            <p>Rating: {selectedProduct.rating.rate}</p>
+            <h3>$ {view.price}</h3>
+            <p>{view.description}</p>
+            <p>Category: {view.category}</p>
+            <p>Rating: {view.rating.rate}</p>
           </div>
         </div>
       )}
