@@ -7,16 +7,14 @@ import About from '../Components/About'
 import SignUp from '../Components/SignUp'
 import SideNav from '../Components/SideNav'
 import Header from '../Components/Header'
+import Toggle from '../Components/Toggle'
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Header />
-      {/* <SideNav/> */}
-    {/* <Home />? */}
-    {/* <About /> */}
-    {/* <Blog/> */}
+     
 
      <Routes>
       <Route path="/" element={<Home/>} ></Route>
@@ -25,8 +23,10 @@ function App() {
       <Route path="/items" element={<Data/>} ></Route>
      </Routes>
 
-      {/* <Data /> */}
-      </BrowserRouter>
+   
+      </BrowserRouter> */}
+
+      <Toggle />
     </div>
   )
 }
