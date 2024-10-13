@@ -63,6 +63,7 @@ function Dropdown() {
     setSelectedCountry(country);
     setSelectedState('');
     setDistricts([]);
+    console.log(selectedCountry);
 
     if (country) {
       setStates(Object.keys(data[country.toLowerCase()].states));
@@ -120,7 +121,7 @@ function Dropdown() {
         </select>
       </label>
     </>
-  );
+  ); 
 }
 
 export default Dropdown;
