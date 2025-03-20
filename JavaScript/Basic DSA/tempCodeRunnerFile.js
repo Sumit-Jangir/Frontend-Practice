@@ -1,0 +1,1 @@
+vowel.includes(arr[i])
